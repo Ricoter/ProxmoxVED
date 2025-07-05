@@ -1,0 +1,40 @@
+{
+  "name": "JupyterLab",
+  "slug": "jupyterlab",
+  "categories": [
+    20
+  ],
+  "date_created": "2025-07-06",
+  "type": "ct",
+  "updateable": true,
+  "privileged": false,
+  "interface_port": 8888,
+  "documentation": "https://jupyterlab.readthedocs.io/en/stable/",
+  "website": "https://jupyter.org/",
+  "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/webp/jupyter.webp",
+  "config_path": "",
+  "description": "JupyterLab is the next-generation interface for Project Jupyter. Compared with the classic Notebook it offers a multi-tab workspace, built-in file browser, terminals, extensible plugin system, and first-party Git integration for version control - all in one browser window.",
+  "install_methods": [
+    {
+      "type": "default",
+      "script": "ct/jupyterlab.sh",
+      "resources": {
+        "cpu": 2,
+        "ram": 2048,
+        "hdd": 8,
+        "os": "ubuntu",
+        "version": "24.04"
+      }
+    }
+  ],
+  "default_credentials": {
+    "username": null,
+    "password": null
+  },
+  "notes": [
+    {
+      "text": "To get the token to access JupyterLab, run the following command: jupyter lab list.",
+      "type": "info"
+    }
+  ]
+}
