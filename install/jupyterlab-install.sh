@@ -15,11 +15,16 @@ update_os
 
 PYTHON_VERSION="3.12" setup_uv
 
+msg_info "Installing Git"
+$STD apt-get install -y git
+msg_ok "Installed Git"
+
 msg_info "Installing JupyterLab"
 mkdir -p /opt/jupyter
 cd /opt/jupyter
 $STD uv venv .venv
-$STD uv pip install jupyterlab
+$STD uv pip install pip
+$STD uv pip install jupyterlab jupyterlab-git
 ln -s /opt/jupyter/.venv/bin/jupyter /usr/local/bin/jupyter
 ln -s /opt/jupyter/.venv/bin/jupyter-lab /usr/local/bin/jupyter-lab
 msg_ok "Installed JupyterLab"
