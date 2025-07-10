@@ -28,7 +28,7 @@ cd /opt/jupyterhub
 # Get latest JupyterHub version
 RELEASE=$(curl -fsSL https://pypi.org/pypi/jupyterhub/json | grep -Po '"version":.*?[^\\]",' | head -1 | cut -d'"' -f4)
 
-$STD uv venv .venv
+$STD uv venv --seed .venv
 $STD uv pip install pip
 $STD uv pip install jupyterhub=="${RELEASE}" jupyterlab
 $STD npm install -g configurable-http-proxy
