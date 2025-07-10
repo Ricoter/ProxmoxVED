@@ -55,7 +55,6 @@ c.Authenticator.admin_users = {'admin'}
 c.Authenticator.allow_all = True
 
 c.Spawner.notebook_dir = '~'
-c.Spawner.cmd = ['/opt/jupyterhub/.venv/bin/jupyter-labhub']
 
 c.JupyterHub.log_level = 'INFO'
 EOF
