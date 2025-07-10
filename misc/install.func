@@ -32,7 +32,7 @@ catch_errors() {
 # This function handles errors
 error_handler() {
     #   source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVED/main/misc/api.func)
-    source <(curl -fsSL https://raw.githubusercontent.com/Ricoter/ProxmoxVED/refs/heads/JupyterLab-branch/misc/api.func)
+    source <(curl -fsSL https://raw.githubusercontent.com/Ricoter/ProxmoxVED/refs/heads/JupyterHub-branch/misc/api.func)
     printf "\e[?25h"
     local exit_code="$?"
     local line_number="$1"
@@ -197,7 +197,7 @@ EOF
         systemctl restart $(basename $(dirname $GETTY_OVERRIDE) | sed 's/\.d//')
         msg_ok "Customized Container"
     fi
-    echo "bash -c \"\$(curl -fsSL https://github.com/Ricoter/ProxmoxVED/raw/JupyterLab-branch/ct/${app}.sh)\"" >/usr/bin/update
+    echo "bash -c \"\$(curl -fsSL https://github.com/Ricoter/ProxmoxVED/raw/JupyterHub-branch/ct/${app}.sh)\"" >/usr/bin/update
     chmod +x /usr/bin/update
     if [[ -n "${SSH_AUTHORIZED_KEY}" ]]; then
         mkdir -p /root/.ssh
